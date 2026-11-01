@@ -1,0 +1,407 @@
+{
+ "brandHeader": {
+  "brandName": "کیا",
+  "countryName": "کره جنوبی"
+ },
+ "modelPriceList": {
+  "brandName": "کیا",
+  "lastUpdateTime": "2026-10-31T23:09:17.7455706+03:30",
+  "carPriceByBrandDetails": [
+   {
+    "marketPrice": 10000000000,
+    "modelName": "EV5",
+    "modelEnglishName": "ev5",
+    "carModelId": 710,
+    "carTypeName": "تیپ530",
+    "carTypeId": 3017,
+    "carYear": 2025,
+    "hasCarPriceZero": true
+   },
+   {
+    "marketPrice": 11800000000,
+    "modelName": "EV5",
+    "modelEnglishName": "ev5",
+    "carModelId": 710,
+    "carTypeName": "تیپ720",
+    "carTypeId": 3007,
+    "carYear": 2025,
+    "hasCarPriceZero": true
+   },
+   {
+    "marketPrice": 7600000000,
+    "modelName": "K3",
+    "modelEnglishName": "k3",
+    "carModelId": 652,
+    "carTypeName": "موتور 1500",
+    "carTypeId": 2893,
+    "carYear": 2025,
+    "hasCarPriceZero": true
+   },
+   {
+    "marketPrice": 13000000000,
+    "modelName": "K5",
+    "modelEnglishName": "k5",
+    "carModelId": 578,
+    "carTypeName": "توربو 1500",
+    "carTypeId": 2808,
+    "carYear": 2025,
+    "hasCarPriceZero": true
+   },
+   {
+    "marketPrice": 12200000000,
+    "modelName": "K5",
+    "modelEnglishName": "k5",
+    "carModelId": 578,
+    "carTypeName": "موتور 2000",
+    "carTypeId": 2743,
+    "carYear": 2025,
+    "hasCarPriceZero": true
+   },
+   {
+    "marketPrice": 9300000000,
+    "modelName": "اپتیما",
+    "modelEnglishName": "optima",
+    "carModelId": 46,
+    "carTypeName": "1رادار -GT LINE - JF",
+    "carTypeId": 1174,
+    "carYear": 2017,
+    "hasCarPriceZero": false
+   },
+   {
+    "marketPrice": 8600000000,
+    "modelName": "اپتیما",
+    "modelEnglishName": "optima",
+    "carModelId": 46,
+    "carTypeName": "1رادار نیمه فول GT LINE - JF",
+    "carTypeId": 1175,
+    "carYear": 2017,
+    "hasCarPriceZero": false
+   },
+   {
+    "marketPrice": 9600000000,
+    "modelName": "اپتیما",
+    "modelEnglishName": "optima",
+    "carModelId": 46,
+    "carTypeName": "2رادار -GT LINE - JF",
+    "carTypeId": 1176,
+    "carYear": 2017,
+    "hasCarPriceZero": false
+   },
+   {
+    "marketPrice": 10200000000,
+    "modelName": "اپتیما",
+    "modelEnglishName": "optima",
+    "carModelId": 46,
+    "carTypeName": "3رادار -GT LINE - JF",
+    "carTypeId": 1075,
+    "carYear": 2017,
+    "hasCarPriceZero": false
+   },
+   {
+    "marketPrice": 10300000000,
+    "modelName": "اپتیما هیبرید",
+    "modelEnglishName": "optimahybrid",
+    "carModelId": 483,
+    "carTypeName": "JF",
+    "carTypeId": 1419,
+    "carYear": 2018,
+    "hasCarPriceZero": false
+   },
+   {
+    "marketPrice": 4000000000,
+    "modelName": "اپیروس",
+    "modelEnglishName": "opirus",
+    "carModelId": 45,
+    "carTypeName": "ROYAL (رویال)",
+    "carTypeId": 104,
+    "carYear": 2009,
+    "hasCarPriceZero": false
+   },
+   {
+    "marketPrice": 4200000000,
+    "modelName": "اپیروس",
+    "modelEnglishName": "opirus",
+    "carModelId": 45,
+    "carTypeName": "SUPER ROYAL(سوپر رویال)",
+    "carTypeId": 102,
+    "carYear": 2009,
+    "hasCarPriceZero": false
+   },
+   {
+    "marketPrice": 11100000000,
+    "modelName": "اسپورتیج",
+    "modelEnglishName": "sportage",
+    "carModelId": 52,
+    "carTypeName": "1500 توربو",
+    "carTypeId": 2797,
+    "carYear": 2025,
+    "hasCarPriceZero": true
+   },
+   {
+    "marketPrice": 4900000000,
+    "modelName": "استونیک",
+    "modelEnglishName": "estonik",
+    "carModelId": 661,
+    "carTypeName": "موتور 1400",
+    "carTypeId": 2913,
+    "carYear": 2025,
+    "hasCarPriceZero": false
+   },
+   {
+    "marketPrice": 5500000000,
+    "modelName": "پیکانتو",
+    "modelEnglishName": "picanto",
+    "carModelId": 47,
+    "carTypeName": "موتور 1200",
+    "carTypeId": 3003,
+    "carYear": 2026,
+    "hasCarPriceZero": true
+   },
+   {
+    "marketPrice": 3400000000,
+    "modelName": "ریو صندوقدار",
+    "modelEnglishName": "riosedan",
+    "carModelId": 375,
+    "carTypeName": "فول UB",
+    "carTypeId": 1054,
+    "carYear": 2017,
+    "hasCarPriceZero": false
+   },
+   {
+    "marketPrice": 3600000000,
+    "modelName": "ریو هاچ بک",
+    "modelEnglishName": "riohatchback",
+    "carModelId": 376,
+    "carTypeName": "فول UB",
+    "carTypeId": 1056,
+    "carYear": 2017,
+    "hasCarPriceZero": false
+   },
+   {
+    "marketPrice": 3550000000,
+    "modelName": "ریو هاچ بک",
+    "modelEnglishName": "riohatchback",
+    "carModelId": 376,
+    "carTypeName": "نیمه فول UB",
+    "carTypeId": 1055,
+    "carYear": 2017,
+    "hasCarPriceZero": false
+   },
+   {
+    "marketPrice": 8400000000,
+    "modelName": "سراتو",
+    "modelEnglishName": "cerato",
+    "carModelId": 44,
+    "carTypeName": "GT لاین",
+    "carTypeId": 2769,
+    "carYear": 2024,
+    "hasCarPriceZero": true
+   },
+   {
+    "marketPrice": 5100000000,
+    "modelName": "سراتو سایپا",
+    "modelEnglishName": "kiacerato",
+    "carModelId": 227,
+    "carTypeName": "2000 اتوماتیک (آپشنال)",
+    "carTypeId": 1206,
+    "carYear": 1398,
+    "hasCarPriceZero": false
+   },
+   {
+    "marketPrice": 6100000000,
+    "modelName": "سراتو کوپه",
+    "modelEnglishName": "ceratokoup",
+    "carModelId": 48,
+    "carTypeName": "فول اتوماتیک موتور 2000-YD",
+    "carTypeId": 1064,
+    "carYear": 2016,
+    "hasCarPriceZero": false
+   },
+   {
+    "marketPrice": 6000000000,
+    "modelName": "سراتو کوپه",
+    "modelEnglishName": "ceratokoup",
+    "carModelId": 48,
+    "carTypeName": "نیمه فول اتوماتیک موتور2000 - YD",
+    "carTypeId": 1062,
+    "carYear": 2016,
+    "hasCarPriceZero": false
+   },
+   {
+    "marketPrice": 6350000000,
+    "modelName": "سلتوس",
+    "modelEnglishName": "seltos",
+    "carModelId": 550,
+    "carTypeName": "اتوماتیک",
+    "carTypeId": 2675,
+    "carYear": 2024,
+    "hasCarPriceZero": true
+   },
+   {
+    "marketPrice": 9800000000,
+    "modelName": "سورنتو",
+    "modelEnglishName": "sorento",
+    "carModelId": 49,
+    "carTypeName": "فول GT LINE - UM  مید فیس",
+    "carTypeId": 1503,
+    "carYear": 2018,
+    "hasCarPriceZero": false
+   },
+   {
+    "marketPrice": 2750000000,
+    "modelName": "سول",
+    "modelEnglishName": "soul",
+    "carModelId": 230,
+    "carTypeName": "فول",
+    "carTypeId": 445,
+    "carYear": 2013,
+    "hasCarPriceZero": false
+   },
+   {
+    "marketPrice": 5500000000,
+    "modelName": "سونت",
+    "modelEnglishName": "sonet",
+    "carModelId": 573,
+    "carTypeName": "موتور 1500",
+    "carTypeId": 2736,
+    "carYear": 2024,
+    "hasCarPriceZero": true
+   },
+   {
+    "marketPrice": 7450000000,
+    "modelName": "کادنزا",
+    "modelEnglishName": "cadenza",
+    "carModelId": 43,
+    "carTypeName": " نیمه فول FL",
+    "carTypeId": 1502,
+    "carYear": 2014,
+    "hasCarPriceZero": false
+   },
+   {
+    "marketPrice": 7850000000,
+    "modelName": "کادنزا",
+    "modelEnglishName": "cadenza",
+    "carModelId": 43,
+    "carTypeName": "فول FL",
+    "carTypeId": 1501,
+    "carYear": 2014,
+    "hasCarPriceZero": false
+   },
+   {
+    "marketPrice": 3350000000,
+    "modelName": "کارناوال",
+    "modelEnglishName": "carnival",
+    "carModelId": 231,
+    "carTypeName": "فول VQ",
+    "carTypeId": 446,
+    "carYear": 2010,
+    "hasCarPriceZero": false
+   },
+   {
+    "marketPrice": 4750000000,
+    "modelName": "کارنز",
+    "modelEnglishName": "carens",
+    "carModelId": 232,
+    "carTypeName": "فول RP",
+    "carTypeId": 1052,
+    "carYear": 2017,
+    "hasCarPriceZero": false
+   },
+   {
+    "marketPrice": 1050000000,
+    "modelName": "کیا ریو مونتاژ",
+    "modelEnglishName": "kiario",
+    "carModelId": 228,
+    "carTypeName": "دنده ای LS",
+    "carTypeId": 442,
+    "carYear": 1391,
+    "hasCarPriceZero": false
+   },
+   {
+    "marketPrice": 7800000000,
+    "modelName": "موهاوی",
+    "modelEnglishName": "mohave",
+    "carModelId": 42,
+    "carTypeName": "فول V8",
+    "carTypeId": 93,
+    "carYear": 2013,
+    "hasCarPriceZero": false
+   }
+  ]
+ },
+ "modelsCardList": [
+  {
+   "carName": "سراتو سایپا",
+   "expertRate": 3,
+   "imageUrl": "https://cdn.hamrah-mechanic.com/55a15e115afe49f9b7197ed1b33287ac.png",
+   "minPrice": 3200000000,
+   "maxPrice": 5100000000,
+   "minYear": 1393,
+   "maxYear": 1398,
+   "modelEnglishName": "kiacerato",
+   "mainBrandEnglishName": "saipa",
+   "modelTypesList": [
+    {
+     "typeName": "1600دنده ای",
+     "typeId": 440
+    },
+    {
+     "typeName": "1600دنده ای(آپشنال)",
+     "typeId": 1207
+    },
+    {
+     "typeName": "2000 اتوماتیک",
+     "typeId": 441
+    },
+    {
+     "typeName": "2000 اتوماتیک (آپشنال)",
+     "typeId": 1206
+    }
+   ],
+   "exhibitionLink": "/cars-for-sale/saipa/kiacerato/",
+   "modelPageUrl": "/carprice/saipa/kiacerato/"
+  },
+  {
+   "carName": "ریو مونتاژ",
+   "expertRate": 3,
+   "imageUrl": "https://cdn.hamrah-mechanic.com/e31e1beab5654016989b7b77c2fc4a5b.png",
+   "minPrice": 740000000,
+   "maxPrice": 1050000000,
+   "minYear": 1384,
+   "maxYear": 1391,
+   "modelEnglishName": "kiario",
+   "mainBrandEnglishName": "saipa",
+   "modelTypesList": [
+    {
+     "typeName": "دنده ای LS",
+     "typeId": 442
+    }
+   ],
+   "exhibitionLink": "/cars-for-sale/saipa/kiario/",
+   "modelPageUrl": "/carprice/saipa/kiario/"
+  },
+  {
+   "carName": "کیا EV5",
+   "expertRate": 3,
+   "imageUrl": "https://cdn.hamrah-mechanic.com/aeebc39b56664c9fb47ce554c7111cc0.png",
+   "minPrice": 10000000000,
+   "maxPrice": 11800000000,
+   "minYear": 2025,
+   "maxYear": 2025,
+   "modelEnglishName": "ev5",
+   "mainBrandEnglishName": "kia",
+   "modelTypesList": [
+    {
+     "typeName": "تیپ530",
+     "typeId": 3017
+    },
+    {
+     "typeName": "تیپ720",
+     "typeId": 3007
+    }
+   ],
+   "exhibitionLink": "/cars-for-sale/kia/ev5/",
+   "modelPageUrl": "/carprice/kia/ev5/"
+  }
+ ]
+}

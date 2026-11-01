@@ -1,0 +1,17 @@
+[
+ {
+  "largeImage": "https://ncdn.hamrah-mechanic.com/2a78dcfdbfe14ce181e56558f436da87.jpg",
+  "thumbnailImage": "https://ncdn.hamrah-mechanic.com/2a78dcfdbfe14ce181e56558f436da87.jpg",
+  "isMainImage": true
+ },
+ {
+  "largeImage": "https://ncdn.hamrah-mechanic.com/d8b455b124164dbabe2b0add5834f2ea.jpg",
+  "thumbnailImage": "https://ncdn.hamrah-mechanic.com/d8b455b124164dbabe2b0add5834f2ea.jpg",
+  "isMainImage": false
+ },
+ {
+  "largeImage": "https://ncdn.hamrah-mechanic.com/71116a981e884561ba87afd8c856c212.jpg",
+  "thumbnailImage": "https://ncdn.hamrah-mechanic.com/71116a981e884561ba87afd8c856c212.jpg",
+  "isMainImage": false
+ }
+]

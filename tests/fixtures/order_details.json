@@ -1,0 +1,123 @@
+{
+ "carInformation": {
+  "carBrandName": "کیا",
+  "carModelName": "اپتیما",
+  "carModelEnglishName": "optima",
+  "carTypeName": "3رادار -GT LINE - JF",
+  "carYear": 2017,
+  "carCategoryId": 1,
+  "consultantPhone": "09000000000",
+  "comingSoon": false,
+  "status": 1,
+  "hideShowConsultantNumber": false,
+  "serviceFee": 224000000,
+  "carId": 2401,
+  "isEnabled": false,
+  "nickName": "کیا اپتیما",
+  "km": 69443,
+  "visitingPlace": "تهران, نارمک",
+  "gearBox": "اتومات",
+  "price": 11200000000,
+  "isSpecialOffer": false,
+  "specialOfferEndTime": null,
+  "offerPrice": 11200000000,
+  "offerPriceDifferencePercentage": null,
+  "carTypeId": 1075,
+  "badgeType": 1,
+  "footerFeatures": [
+   {
+    "title": "قابل معاوضه",
+    "iconKey": "/contentsv156/images/exhibiton/exchange-icon.svg"
+   },
+   {
+    "title": "کارشناسی شده",
+    "iconKey": "/contentsv156/images/exhibiton/wrench-icon.svg"
+   },
+   {
+    "title": "گارانتی ۷ روزه",
+    "iconKey": "/contentsv156/images/exhibiton/guarantee-icon.svg"
+   }
+  ]
+ },
+ "descriptionPart": {
+  "expoCode": 1322205799,
+  "description": "این خودرو توسط همراه مکانیک کارشناسی شده است و تحت پوشش ضمانت تامین خسارت تا سقف 2.5 میلیارد تومان است."
+ },
+ "carFeature": {
+  "features": [
+   "عملکرد مناسب موتور و گیربکس ",
+   "فرمان پذیری مناسب ",
+   "کیفیت قطعات کابین مناسب ",
+   "طراحی اسپرت و زیبا ",
+   "بازار خرید و فروش مناسب ",
+   "کارکرد کم نسبت به سال"
+  ]
+ },
+ "carSpecifications": {
+  "specs": [
+   {
+    "key": "bodyType",
+    "title": "سواری",
+    "value": "سدان",
+    "icon": "/contentsv156/images/pdp/BodyType.svg"
+   },
+   {
+    "key": "km",
+    "title": "کارکرد",
+    "value": "69443",
+    "icon": "/contentsv156/images/pdp/km.svg"
+   },
+   {
+    "key": "gearBox",
+    "title": "گیربکس",
+    "value": "اتومات",
+    "icon": "/contentsv156/images/pdp/GearBox.svg"
+   },
+   {
+    "key": "technicalDescription",
+    "title": "وضعیت فنی",
+    "value": "سالم",
+    "icon": "/contentsv156/images/pdp/TechnicalDescription.svg"
+   },
+   {
+    "key": "bodyCondition",
+    "title": "وضعیت بدنه",
+    "value": " 1 قطعه رنگ",
+    "icon": "/contentsv156/images/pdp/BodyCondition.svg"
+   },
+   {
+    "key": "color",
+    "title": "رنگ بدنه",
+    "value": "سفید",
+    "icon": "/contentsv156/images/pdp/Color.svg"
+   },
+   {
+    "key": "fuelType",
+    "title": "سوخت",
+    "value": "بنزینی",
+    "icon": "/contentsv156/images/pdp/FuelType.svg"
+   },
+   {
+    "key": "document",
+    "title": "سند",
+    "value": "دو برگی",
+    "icon": "/contentsv156/images/pdp/Document.svg"
+   },
+   {
+    "key": "remainingInsurance",
+    "title": "مانده بیمه",
+    "value": "11 ماه",
+    "icon": "/contentsv156/images/pdp/RemainingInsurance.svg"
+   }
+  ]
+ },
+ "trackingCode": null,
+ "leasingInformation": null,
+ "leasingSettings": {
+  "shortTerm": false,
+  "longTerm": false
+ },
+ "zeroCarVariants": null,
+ "availableAutoCentersDto": null,
+ "leasingSectionTagEnum": null
+}

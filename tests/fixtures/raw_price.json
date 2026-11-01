@@ -1,0 +1,22 @@
+{
+ "data": {
+  "result": {
+   "priceUp": 10712000000,
+   "priceDown": 9888000000,
+   "carId": 2401,
+   "carName": "کیا اپتیما 2017",
+   "carTypeName": "3رادار -GT LINE - JF",
+   "brandName": "کیا",
+   "modelName": "اپتیما",
+   "year": 2017,
+   "gearBox": "اتومات",
+   "imageUrl": "https://cdn.hamrah-mechanic.com/94dc39d37b70409db7cf8ea3390a943f.png"
+  },
+  "status": 0,
+  "exception": null,
+  "message": "عملیات با موفقیت انجام شد"
+ },
+ "isSuccess": true,
+ "apiResultCode": 0,
+ "message": "عملیات با موفقیت انجام شد"
+}

@@ -1,0 +1,38 @@
+[
+ {
+  "id": 8,
+  "name": "تهران",
+  "englishName": null,
+  "hasAutoCenter": null
+ },
+ {
+  "id": 5,
+  "name": "البرز",
+  "englishName": null,
+  "hasAutoCenter": null
+ },
+ {
+  "id": 1,
+  "name": "آذربایجان شرقی",
+  "englishName": null,
+  "hasAutoCenter": null
+ },
+ {
+  "id": 2,
+  "name": "آذربایجان غربی",
+  "englishName": null,
+  "hasAutoCenter": null
+ },
+ {
+  "id": 3,
+  "name": "اردبیل",
+  "englishName": null,
+  "hasAutoCenter": null
+ },
+ {
+  "id": 4,
+  "name": "اصفهان",
+  "englishName": null,
+  "hasAutoCenter": null
+ }
+]

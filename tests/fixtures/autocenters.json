@@ -1,0 +1,26 @@
+[
+ {
+  "id": 13,
+  "title": "شهرک غرب (مرکز تجاری رویال)",
+  "englishTitle": "royalcenter",
+  "address": "بلوار دریا، تقاطع بلوار مدیریت، مرکز تجاری رویال، طبقه منفی ۷",
+  "carCount": 109,
+  "isActive": true,
+  "cityName": "تهران",
+  "startHour": "9",
+  "endHour": "20",
+  "isComingSoon": false
+ },
+ {
+  "id": 14,
+  "title": "پاسداران (مرکز تجاری سام)",
+  "englishTitle": "samcenter",
+  "address": "نبش بوستان پنجم، مرکز تجاری سام، طبقه منفی ۱",
+  "carCount": 107,
+  "isActive": true,
+  "cityName": "تهران",
+  "startHour": "9",
+  "endHour": "20",
+  "isComingSoon": false
+ }
+]

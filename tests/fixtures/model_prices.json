@@ -1,0 +1,88 @@
+{
+ "modelDetail": {
+  "nickName": "سراتو سایپا",
+  "modelId": 227,
+  "price": 5900000000,
+  "typeName": "2000 اتوماتیک (آپشنال)",
+  "minYear": 1393,
+  "maxYear": 1398,
+  "exhibitionLink": "/cars-for-sale/saipa/kiacerato/"
+ },
+ "yearsPriceList": {
+  "lastUpdateTime": "2026-10-31T23:09:19.2199082+03:30",
+  "carPriceOtherYearsDetails": [
+   {
+    "brandName": "سایپا",
+    "brandEnglishName": "saipa",
+    "modelName": "سراتو سایپا",
+    "modelEnglishName": "kiacerato",
+    "carModelId": 227,
+    "carTypeId": 1206,
+    "carYear": 1398,
+    "marketPrice": 5100000000,
+    "existPriceZero": false,
+    "carTypeName": "2000 اتوماتیک (آپشنال)"
+   },
+   {
+    "brandName": "سایپا",
+    "brandEnglishName": "saipa",
+    "modelName": "سراتو سایپا",
+    "modelEnglishName": "kiacerato",
+    "carModelId": 227,
+    "carTypeId": 1207,
+    "carYear": 1397,
+    "marketPrice": 4500000000,
+    "existPriceZero": false,
+    "carTypeName": "1600دنده ای(آپشنال)"
+   },
+   {
+    "brandName": "سایپا",
+    "brandEnglishName": "saipa",
+    "modelName": "سراتو سایپا",
+    "modelEnglishName": "kiacerato",
+    "carModelId": 227,
+    "carTypeId": 440,
+    "carYear": 1396,
+    "marketPrice": 4100000000,
+    "existPriceZero": false,
+    "carTypeName": "1600دنده ای"
+   },
+   {
+    "brandName": "سایپا",
+    "brandEnglishName": "saipa",
+    "modelName": "سراتو سایپا",
+    "modelEnglishName": "kiacerato",
+    "carModelId": 227,
+    "carTypeId": 440,
+    "carYear": 1395,
+    "marketPrice": 4000000000,
+    "existPriceZero": false,
+    "carTypeName": "1600دنده ای"
+   },
+   {
+    "brandName": "سایپا",
+    "brandEnglishName": "saipa",
+    "modelName": "سراتو سایپا",
+    "modelEnglishName": "kiacerato",
+    "carModelId": 227,
+    "carTypeId": 440,
+    "carYear": 1394,
+    "marketPrice": 3500000000,
+    "existPriceZero": false,
+    "carTypeName": "1600دنده ای"
+   },
+   {
+    "brandName": "سایپا",
+    "brandEnglishName": "saipa",
+    "modelName": "سراتو سایپا",
+    "modelEnglishName": "kiacerato",
+    "carModelId": 227,
+    "carTypeId": 440,
+    "carYear": 1393,
+    "marketPrice": 3200000000,
+    "existPriceZero": false,
+    "carTypeName": "1600دنده ای"
+   }
+  ]
+ }
+}

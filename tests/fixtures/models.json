@@ -1,0 +1,178 @@
+{
+ "data": {
+  "totalCount": 0,
+  "index": 0,
+  "length": 23,
+  "sortField": null,
+  "sortOrder": 0,
+  "status": 0,
+  "result": [
+   {
+    "carModelId": 710,
+    "brandId": 47,
+    "modelName": "EV5",
+    "modelEnglishName": "ev5",
+    "secondParentId": 0
+   },
+   {
+    "carModelId": 652,
+    "brandId": 47,
+    "modelName": "K3",
+    "modelEnglishName": "k3",
+    "secondParentId": 0
+   },
+   {
+    "carModelId": 578,
+    "brandId": 47,
+    "modelName": "K5",
+    "modelEnglishName": "k5",
+    "secondParentId": 0
+   },
+   {
+    "carModelId": 46,
+    "brandId": 47,
+    "modelName": "اپتیما",
+    "modelEnglishName": "optima",
+    "secondParentId": 0
+   },
+   {
+    "carModelId": 483,
+    "brandId": 47,
+    "modelName": "اپتیما هیبرید",
+    "modelEnglishName": "optimahybrid",
+    "secondParentId": 0
+   },
+   {
+    "carModelId": 45,
+    "brandId": 47,
+    "modelName": "اپیروس",
+    "modelEnglishName": "opirus",
+    "secondParentId": 0
+   },
+   {
+    "carModelId": 52,
+    "brandId": 47,
+    "modelName": "اسپورتیج",
+    "modelEnglishName": "sportage",
+    "secondParentId": 0
+   },
+   {
+    "carModelId": 661,
+    "brandId": 47,
+    "modelName": "استونیک",
+    "modelEnglishName": "estonik",
+    "secondParentId": 0
+   },
+   {
+    "carModelId": 47,
+    "brandId": 47,
+    "modelName": "پیکانتو",
+    "modelEnglishName": "picanto",
+    "secondParentId": 0
+   },
+   {
+    "carModelId": 375,
+    "brandId": 47,
+    "modelName": "ریو صندوقدار",
+    "modelEnglishName": "riosedan",
+    "secondParentId": 0
+   },
+   {
+    "carModelId": 376,
+    "brandId": 47,
+    "modelName": "ریو هاچ بک",
+    "modelEnglishName": "riohatchback",
+    "secondParentId": 0
+   },
+   {
+    "carModelId": 44,
+    "brandId": 47,
+    "modelName": "سراتو",
+    "modelEnglishName": "cerato",
+    "secondParentId": 0
+   },
+   {
+    "carModelId": 227,
+    "brandId": 11,
+    "modelName": "سراتو سایپا",
+    "modelEnglishName": "kiacerato",
+    "secondParentId": 0
+   },
+   {
+    "carModelId": 48,
+    "brandId": 47,
+    "modelName": "سراتو کوپه",
+    "modelEnglishName": "ceratokoup",
+    "secondParentId": 0
+   },
+   {
+    "carModelId": 550,
+    "brandId": 47,
+    "modelName": "سلتوس",
+    "modelEnglishName": "seltos",
+    "secondParentId": 0
+   },
+   {
+    "carModelId": 49,
+    "brandId": 47,
+    "modelName": "سورنتو",
+    "modelEnglishName": "sorento",
+    "secondParentId": 0
+   },
+   {
+    "carModelId": 230,
+    "brandId": 47,
+    "modelName": "سول",
+    "modelEnglishName": "soul",
+    "secondParentId": 0
+   },
+   {
+    "carModelId": 573,
+    "brandId": 47,
+    "modelName": "سونت",
+    "modelEnglishName": "sonet",
+    "secondParentId": 0
+   },
+   {
+    "carModelId": 43,
+    "brandId": 47,
+    "modelName": "کادنزا",
+    "modelEnglishName": "cadenza",
+    "secondParentId": 0
+   },
+   {
+    "carModelId": 231,
+    "brandId": 47,
+    "modelName": "کارناوال",
+    "modelEnglishName": "carnival",
+    "secondParentId": 0
+   },
+   {
+    "carModelId": 232,
+    "brandId": 47,
+    "modelName": "کارنز",
+    "modelEnglishName": "carens",
+    "secondParentId": 0
+   },
+   {
+    "carModelId": 228,
+    "brandId": 11,
+    "modelName": "کیا ریو مونتاژ",
+    "modelEnglishName": "kiario",
+    "secondParentId": 0
+   },
+   {
+    "carModelId": 42,
+    "brandId": 47,
+    "modelName": "موهاوی",
+    "modelEnglishName": "mohave",
+    "secondParentId": 0
+   }
+  ],
+  "exception": null,
+  "message": "عملیات با موفقیت انجام شد"
+ },
+ "isSuccess": true,
+ "apiResultCode": 0,
+ "message": "عملیات با موفقیت انجام شد"
+}

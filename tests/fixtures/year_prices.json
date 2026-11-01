@@ -1,0 +1,55 @@
+{
+ "yearDetail": {
+  "nickName": "سراتو سایپا",
+  "expertRate": 3,
+  "imageUrl": "https://cdn.hamrah-mechanic.com/bd9661d3c9b042a4ae5070117c8926ee.jpg",
+  "minPrice": 4500000000,
+  "maxPrice": 4900000000,
+  "modelId": 227,
+  "exhibitionLink": "/cars-for-sale/saipa/kiacerato/"
+ },
+ "carsPriceList": {
+  "lastUpdateTime": "2026-10-31T23:09:20.7854585+03:30",
+  "carPriceOtherYearsDetails": [
+   {
+    "brandName": "سایپا",
+    "brandEnglishName": "saipa",
+    "modelName": "سراتو سایپا",
+    "modelEnglishName": "kiacerato",
+    "carTypeEnglishName": "manual 1600-full option",
+    "carTypeName": "1600دنده ای(آپشنال)",
+    "carModelId": 227,
+    "carTypeId": 1207,
+    "carYear": 1397,
+    "marketPrice": 4500000000,
+    "hasCarPriceZero": null
+   },
+   {
+    "brandName": "سایپا",
+    "brandEnglishName": "saipa",
+    "modelName": "سراتو سایپا",
+    "modelEnglishName": "kiacerato",
+    "carTypeEnglishName": "2000",
+    "carTypeName": "2000 اتوماتیک",
+    "carModelId": 227,
+    "carTypeId": 441,
+    "carYear": 1397,
+    "marketPrice": 4800000000,
+    "hasCarPriceZero": null
+   },
+   {
+    "brandName": "سایپا",
+    "brandEnglishName": "saipa",
+    "modelName": "سراتو سایپا",
+    "modelEnglishName": "kiacerato",
+    "carTypeEnglishName": "auto 2000-full option",
+    "carTypeName": "2000 اتوماتیک (آپشنال)",
+    "carModelId": 227,
+    "carTypeId": 1206,
+    "carYear": 1397,
+    "marketPrice": 4900000000,
+    "hasCarPriceZero": null
+   }
+  ]
+ }
+}

@@ -1,0 +1,16 @@
+{
+ "data": {
+  "result": {
+   "priceChartData": [],
+   "monthCount": 94,
+   "monthlyChange": 9.6,
+   "isIncreased": true
+  },
+  "status": 0,
+  "exception": null,
+  "message": "عملیات با موفقیت انجام شد"
+ },
+ "isSuccess": true,
+ "apiResultCode": 0,
+ "message": "عملیات با موفقیت انجام شد"
+}
