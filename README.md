@@ -37,12 +37,12 @@ Other clients: command `uvx`, args `["hamrah-mechanic-mcp"]`.
 | `hm_brands` | Brand slugs, optionally filtered by name. |
 | `hm_models` | Models of a brand with slugs. |
 | `hm_prices` | Daily market prices: a brand's models, a model's trims by year, or one year. |
-| `hm_price_estimate` | Price range and monthly trend of one trim in one year. |
+| `hm_price_estimate` | Price range and monthly trend of one trim in one year (trend is null when the site has no data). |
 | `hm_price_history` | About six monthly market prices of one trim and year, plus its other years and cars for sale. |
 | `hm_price_list` | Every priced domestic or imported car, filtered by budget or brand. |
 | `hm_reviews` | Expert review (pros, cons, engine, safety), owner ratings and comments of a model, or a brand profile. |
 | `hm_articles` | Search and read the Persian magazine (specs, comparisons, buying and care advice, news). |
-| `hm_search_cars` | Cars for sale: brand, model, price, year, km, gearbox, fuel, body, origin, color, city, installments, showroom stock, sort. |
+| `hm_search_cars` | Cars for sale: brand, model, price, year, km, gearbox, fuel, body, origin, color, city, installments, showroom stock, sort. A brand also matches its Iranian-assembled models; those cards show the requested brand plus `maker`. |
 | `hm_car` | One ad: price, specs, condition, highlights, photos. |
 | `hm_inspection_prices` | Fee for the full, VIP and economy inspection of a car, by time slot. |
 | `hm_branches` | Showrooms and inspection centers of a province. |
