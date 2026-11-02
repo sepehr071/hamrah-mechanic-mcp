@@ -72,6 +72,12 @@ def _row(r: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+def _trend(chart: dict[str, Any]) -> dict[str, Any]:
+    """Monthly change and direction; both null when the site has no trend (it sends 0.0 and no direction)."""
+    up = chart.get("isIncreased")
+    return {"monthly_change_percent": None if up is None else chart.get("monthlyChange"), "rising": up}
+
+
 def _card(c: dict[str, Any]) -> dict[str, Any]:
     return {
         "id": c.get("orderId"),
@@ -222,8 +228,7 @@ async def hm_price_estimate(type_id: TypeId, year: Year) -> dict:
         "car_id": e.get("carId"),
         "price_low": e.get("priceDown"),
         "price_high": e.get("priceUp"),
-        "monthly_change_percent": c.get("monthlyChange"),
-        "rising": c.get("isIncreased"),
+        **_trend(c),
     }
 
 
@@ -261,6 +266,7 @@ async def hm_search_cars(
 
     Returns ad cards (price in Toman, km, year, city). Use hm_car with an ad id for the full details and photos, and
     hm_prices to compare with the market. Price, year and km filters are inclusive. `total` is the number of matches.
+    A brand also matches its Iranian-assembled models; those cards add `maker` (e.g. Kia Cerato, maker saipa).
     """
     if model and not brand:
         raise ApiError("`model` needs `brand`.")
@@ -287,6 +293,10 @@ async def hm_search_cars(
         q["year"] = f"{year_min or 1380},{year_max or 2030}"
     res = _data(await fetch("/common/newexhibition", q))
     cards = [_card(c) for c in res["list"]]
+    if brand:  # Iranian-assembled cars carry the maker (saipa) as brandEnglishName; report the brand asked for
+        for c in cards:
+            if c["brand"] != brand.lower():
+                c["maker"], c["brand"] = c["brand"], brand.lower()
     if sort == "price_asc":
         cards = [c for c in cards if (c["price"] or 0) > 1000]  # placeholder prices of 1 Toman sort first
     return {"total": res["totalCount"], "page": page, "count": len(cards), "cars": cards, "note": TOMAN_NOTE}

@@ -8,7 +8,7 @@ from typing import Annotated, Literal
 
 from pydantic import Field
 
-from .cars import TOMAN_NOTE, Model, Slug, TypeId, Year, _card
+from .cars import TOMAN_NOTE, Model, Slug, TypeId, Year, _card, _trend
 from .http import ApiError, next_data, wp
 from .registry import tool
 
@@ -79,8 +79,7 @@ async def hm_price_history(
         "price_high": p.get("priceUp"),
         "zero_km_price": p.get("priceZero") or None,
         "history": [{"month": h["shamsiDate"], "price": h["price"]} for h in chart.get("priceChartData") or []],
-        "monthly_change_percent": chart.get("monthlyChange"),
-        "rising": chart.get("isIncreased"),
+        **_trend(chart),
         "other_years_and_trims": others,
         "for_sale": cars,
         "note": TOMAN_NOTE,

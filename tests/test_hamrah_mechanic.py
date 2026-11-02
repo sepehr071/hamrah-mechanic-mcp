@@ -96,6 +96,13 @@ async def test_price_estimate_merges_range_and_trend(client, site):
     assert r["monthly_change_percent"] == 9.6 and r["rising"] is True
 
 
+def test_trend_is_null_without_direction():
+    from hamrah_mechanic_mcp.cars import _trend
+
+    assert _trend({"monthlyChange": 0.0, "isIncreased": None}) == {"monthly_change_percent": None, "rising": None}
+    assert _trend({"monthlyChange": 2.5, "isIncreased": False}) == {"monthly_change_percent": 2.5, "rising": False}
+
+
 async def test_search_builds_site_query(client, site):
     r = (
         await client.call_tool(
