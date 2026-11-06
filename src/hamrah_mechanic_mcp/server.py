@@ -15,20 +15,10 @@ INSTRUCTIONS = """\
 Unofficial, read-only access to Hamrah Mechanic (همراه مکانیک, hamrah-mechanic.com), an Iranian car services company:
 the same public data its site shows to anyone without an account. Nothing here can log in, book, buy or sell.
 
-Tools: hm_brands (brand slugs), hm_models (models of a brand), hm_prices (daily market price list: a brand's models,
-a model's trims by year, or one year), hm_price_estimate (price range and monthly trend of one trim and year),
-hm_search_cars (used and zero-km cars for sale with filters), hm_car (one ad in full), hm_inspection_prices (fee for
-the three inspection packages of a car, by time slot), hm_branches (showrooms and inspection centers by province),
-hm_price_history (about six monthly market prices of one trim and year, plus its other years), hm_price_list (every
-priced domestic or imported car, filter by budget or brand), hm_reviews (expert review with pros, cons, engine and
-safety notes, owner ratings and comments), hm_articles (search and read the Persian magazine: specs, comparisons,
-buying and maintenance advice, news).
-
 Typical flows: "price of a 1397 Cerato" -> hm_prices(brand="saipa", model="kiacerato", year=1397). "Used Kia
 Sportage under 10 billion" -> hm_search_cars(brand="kia", model="sportage", price_max=10000) -> hm_car. "Is this ad
 fairly priced" -> hm_car (type_id, year) -> hm_price_estimate or hm_price_history. "Cars up to 3 billion" ->
-hm_price_list(price_max=3000). Slugs come from hm_brands and hm_models; Iranian-made
-cars sit under their Iranian maker (the Cerato assembled by Saipa is saipa/kiacerato). Prices are Toman (the site
+hm_price_list(price_max=3000). Slugs come from hm_brands and hm_models; Iranian-made cars sit under their Iranian maker (the Cerato assembled by Saipa is saipa/kiacerato). Prices are Toman (the site
 shows 5,100,000,000 as 5.1 billion Toman); price filters are million Toman. Years are Solar Hijri for Iranian cars
 (1397) and Gregorian for imports (2017). Market prices are Hamrah Mechanic's own estimates, refreshed daily; the site
 publishes no factory price; history is monthly and only about six months. The site has no parts shop, repair

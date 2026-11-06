@@ -66,14 +66,14 @@ async def test_all_tools_are_read_only_and_described(client):
 
 async def test_brands_filter_by_persian_or_english(client, site):
     r = (await client.call_tool("hm_brands", {"query": "کیا"})).structured_content
-    assert r["brands"] == [{"slug": "kia", "name": "کیا", "id": 47}]
+    assert r["brands"] == [{"slug": "kia", "name": "کیا"}]
     assert (await client.call_tool("hm_brands", {"query": "TOYO"})).structured_content["count"] == 1
     assert "BUILD123" in str(site.calls[1].url)  # build id read from the home page
 
 
 async def test_models_use_brand_id(client, site):
     r = (await client.call_tool("hm_models", {"brand": "kia"})).structured_content
-    assert r["count"] > 3 and {"slug": "optima", "name": "اپتیما", "id": 46} in r["models"]
+    assert r["count"] > 3 and {"slug": "optima", "name": "اپتیما"} in r["models"]
     assert site.calls[-1].url.params["brandId"] == "[47]"
     bad = await client.call_tool("hm_models", {"brand": "nope"})
     assert bad.is_error

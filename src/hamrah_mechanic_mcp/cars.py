@@ -10,18 +10,16 @@ from pydantic import Field
 from .http import SITE, ApiError, fetch, next_data
 from .registry import tool
 
-Slug = Annotated[
-    str, Field(description="Brand slug from hm_brands, e.g. kia, saipa, irankhodro.", min_length=1, max_length=40)
-]
+Slug = Annotated[str, Field(description="Brand slug from hm_brands, e.g. kia, saipa.", min_length=1, max_length=40)]
 Model = Annotated[
     str,
-    Field(description="Model slug from hm_models, e.g. optima, kiacerato, peugeot207.", min_length=1, max_length=60),
+    Field(description="Model slug from hm_models, e.g. kiacerato.", min_length=1, max_length=60),
 ]
-TypeId = Annotated[int, Field(description="Trim id (carTypeId) from hm_prices rows or hm_models.", ge=1)]
+TypeId = Annotated[int, Field(description="Trim id from hm_prices rows.", ge=1)]
 Year = Annotated[
     int,
     Field(
-        description="Model year as the site shows it: Solar Hijri (1397) for Iranian cars, Gregorian (2017) for imports.",
+        description="Solar Hijri (1397) for Iranian cars, Gregorian (2017) for imports.",
         ge=1380,
         le=2030,
     ),
@@ -101,18 +99,13 @@ def _card(c: dict[str, Any]) -> dict[str, Any]:
 
 @tool("Car brands")
 async def hm_brands(
-    query: Annotated[
-        str | None, Field(description="Part of a brand name, Persian or English (e.g. کیا, toyota). Omit for all.")
-    ] = None,
+    query: Annotated[str | None, Field(description="Part of a brand name, Persian or English. Omit for all.")] = None,
 ) -> dict:
-    """List the car brands Hamrah Mechanic knows, with the slug the other tools take.
-
-    Use first when you need a brand slug. Then call hm_models for its models, or hm_prices for its price list.
-    """
+    """List the car brands Hamrah Mechanic knows, with the slug the other tools take."""
     pp = await next_data("cars-for-sale")
     q = (query or "").strip().lower()
     rows = [
-        {"slug": b["brandEnglishName"], "name": b["brandName"].strip(), "id": b["brandId"]}
+        {"slug": b["brandEnglishName"], "name": b["brandName"].strip()}
         for b in pp["brands"]
         if not q or q in b["brandName"].lower() or q in b["brandEnglishName"].lower()
     ]
@@ -121,19 +114,16 @@ async def hm_brands(
 
 @tool("Car models of a brand")
 async def hm_models(brand: Slug) -> dict:
-    """List the models of one brand with their slugs and trims (types).
+    """List the models of one brand with their slugs.
 
-    Use after hm_brands. Model slugs go to hm_prices (market prices, which also lists the trims) and hm_search_cars
-    (cars for sale).
+    Slugs go to hm_prices and hm_search_cars.
     """
     brands = (await next_data("cars-for-sale"))["brands"]
     b = next((x for x in brands if x["brandEnglishName"].lower() == brand.lower()), None)
     if not b:
         raise ApiError(f"Unknown brand '{brand}'. Call hm_brands to see the slugs.")
     body = await fetch("/common/carbrandsnew/getcarmodelnew/exhibitionfeature", {"brandId": f"[{b['brandId']}]"})
-    models = [
-        {"slug": m["modelEnglishName"], "name": m["modelName"].strip(), "id": m["carModelId"]} for m in _data(body)
-    ]
+    models = [{"slug": m["modelEnglishName"], "name": m["modelName"].strip()} for m in _data(body)]
     return {"brand": b["brandName"].strip(), "count": len(models), "models": models}
 
 
@@ -142,19 +132,18 @@ async def hm_prices(
     brand: Slug,
     model: Annotated[
         str | None,
-        Field(description="Model slug (from hm_models, or `model` in a brand listing). Omit for the whole brand."),
+        Field(description="Model slug. Omit for the whole brand."),
     ] = None,
     year: Annotated[
         int | None,
-        Field(description="Model year; needs `model`. Gives the price of every trim of that year.", ge=1380, le=2030),
+        Field(description="Model year; needs `model`.", ge=1380, le=2030),
     ] = None,
-    limit: Annotated[int, Field(description="Most rows returned for a brand or model.", ge=1, le=200)] = 60,
+    limit: Annotated[int, Field(description="Most rows returned.", ge=1, le=200)] = 60,
 ) -> dict:
     """Get today's market (used and zero-km) prices of cars from Hamrah Mechanic's daily price list.
 
-    Brand only: one summary line per model (price range, years, trims). With a model: the price of each trim and year.
-    With model and year: that year's trims. Prices in Toman. Use brand slugs from hm_brands; take a type_id from the
-    rows to call hm_price_estimate, or the model slug to call hm_search_cars for real ads.
+    Brand only: one line per model (price range, years, trims). With model: each trim and year. With model and year:
+    that year's trims. Take type_id from rows to call hm_price_estimate.
     """
     brand = brand.lower()
     if year is not None and not model:
@@ -200,7 +189,7 @@ async def hm_prices(
             }
             for c in cards[:limit]
         ],
-        "note": "Pass `price_brand` as brand and `model` to hm_prices for per-trim, per-year prices. " + TOMAN_NOTE,
+        "note": "Pass `price_brand` as brand and `model` to hm_prices for per-trim, per-year prices.",
     }
 
 
@@ -208,9 +197,8 @@ async def hm_prices(
 async def hm_price_estimate(type_id: TypeId, year: Year) -> dict:
     """Get the market price range and recent monthly change for one trim in one model year.
 
-    Use with a type_id and year from hm_prices rows. The range is what Hamrah Mechanic pays or advises (priceDown to
-    priceUp) in Toman; monthly_change_percent is the latest monthly change, only given for some trims. For the monthly
-    price history use hm_price_history.
+    Take type_id and year from hm_prices rows. monthly_change_percent is only given for some trims. For monthly
+    history use hm_price_history.
     """
     est, chart = await asyncio.gather(
         fetch("/price/newpricecalculation/raw-price", {"carTypeId": type_id, "year": year}),
@@ -236,16 +224,14 @@ async def hm_price_estimate(type_id: TypeId, year: Year) -> dict:
 async def hm_search_cars(
     brand: Annotated[str | None, Field(description="Brand slug from hm_brands (one only), e.g. toyota.")] = None,
     model: Annotated[str | None, Field(description="Model slug from hm_models; needs `brand`.")] = None,
-    price_min: Annotated[
-        int | None, Field(description="Lowest price in million Toman, e.g. 1000 for 1 billion.", ge=0)
-    ] = None,
-    price_max: Annotated[int | None, Field(description="Highest price in million Toman.", ge=0)] = None,
+    price_min: Annotated[int | None, Field(description="Lowest price, million Toman (1000 = 1 billion).", ge=0)] = None,
+    price_max: Annotated[int | None, Field(description="Highest price, million Toman.", ge=0)] = None,
     year_min: Annotated[
         int | None,
-        Field(description="Oldest model year (Solar 1395 or Gregorian 2016, as the ad shows).", ge=1380, le=2030),
+        Field(description="Oldest model year (Solar or Gregorian, as the ad shows).", ge=1380, le=2030),
     ] = None,
     year_max: Annotated[int | None, Field(description="Newest model year.", ge=1380, le=2030)] = None,
-    max_km: Annotated[int | None, Field(description="Most kilometres driven; 0 gives zero-km cars only.", ge=0)] = None,
+    max_km: Annotated[int | None, Field(description="Most km driven; 0 = zero-km only.", ge=0)] = None,
     gearbox: GEARBOX | None = None,
     fuel: FUEL | None = None,
     body: BODY | None = None,
@@ -253,20 +239,17 @@ async def hm_search_cars(
     color: COLOR | None = None,
     city: CITY | None = None,
     installments: Annotated[bool, Field(description="Only cars that can be bought in installments.")] = False,
-    showroom_only: Annotated[
-        bool, Field(description="Only the showrooms' own stock (delivered at any branch).")
-    ] = False,
+    showroom_only: Annotated[bool, Field(description="Only showroom stock.")] = False,
     sort: Annotated[
         Literal["default", "price_asc", "price_desc", "newest_year", "lowest_km"],
         Field(description="Order of results."),
     ] = "default",
-    page: Annotated[int, Field(description="Page number, 24 ads each.", ge=1, le=100)] = 1,
+    page: Annotated[int, Field(description="24 ads per page.", ge=1, le=100)] = 1,
 ) -> dict:
     """Search the used and zero-km cars Hamrah Mechanic's showrooms sell, with filters.
 
-    Returns ad cards (price in Toman, km, year, city). Use hm_car with an ad id for the full details and photos, and
-    hm_prices to compare with the market. Price, year and km filters are inclusive. `total` is the number of matches.
-    A brand also matches its Iranian-assembled models; those cards add `maker` (e.g. Kia Cerato, maker saipa).
+    Returns ad cards; hm_car gives one ad in full. Filters are inclusive; `total` is the match count. A brand also
+    matches its Iranian-assembled models; those cards add `maker` (e.g. saipa).
     """
     if model and not brand:
         raise ApiError("`model` needs `brand`.")
@@ -299,18 +282,17 @@ async def hm_search_cars(
                 c["maker"], c["brand"] = c["brand"], brand.lower()
     if sort == "price_asc":
         cards = [c for c in cards if (c["price"] or 0) > 1000]  # placeholder prices of 1 Toman sort first
-    return {"total": res["totalCount"], "page": page, "count": len(cards), "cars": cards, "note": TOMAN_NOTE}
+    return {"total": res["totalCount"], "page": page, "count": len(cards), "cars": cards}
 
 
 @tool("One car for sale")
 async def hm_car(
-    id: Annotated[int, Field(description="Ad id (orderId) from hm_search_cars, e.g. 3560384.", ge=1)],
+    id: Annotated[int, Field(description="Ad id from hm_search_cars.", ge=1)],
     photos: Annotated[int, Field(description="How many photo links to return.", ge=0, le=20)] = 4,
 ) -> dict:
     """Get the full details of one car for sale: price, specs, condition, inspection notes, photos and showroom.
 
-    Use after hm_search_cars. No phone numbers or seller data are returned. For the inspection fee of this model use
-    hm_inspection_prices with its car_id.
+    Use after hm_search_cars. No phone numbers or seller data. car_id feeds hm_inspection_prices.
     """
     d, gallery = await asyncio.gather(
         fetch("/order/details", {"orderId": id}),
@@ -343,7 +325,6 @@ async def hm_car(
         "perks": [f["title"] for f in ci.get("footerFeatures") or []],
         "about": d.get("descriptionPart", {}).get("description"),
         "photos": [p["largeImage"] for p in pics[:photos] if p.get("largeImage")],
-        "note": TOMAN_NOTE,
     }
 
 
@@ -354,14 +335,13 @@ async def hm_inspection_prices(
     year: Annotated[int | None, Field(description="Model year, with `type_id`.", ge=1380, le=2030)] = None,
     time_slot: Annotated[
         Literal["standard", "discounted", "premium"],
-        Field(description="Visit time slot: discounted is about 15% cheaper, premium adds 500,000 (VIP unchanged)."),
+        Field(description="discounted is about 15% cheaper, premium adds 500,000 Toman (VIP unchanged)."),
     ] = "standard",
 ) -> dict:
     """Get what Hamrah Mechanic charges to inspect a given car at its location, for each inspection package.
 
-    Give car_id, or type_id with year. Three packages: full, VIP (adds contract drafting) and economy; prices are in
-    Toman. The fee depends on the car's value and the time slot (discounted and premium slots were read from the price
-    pattern of the site's hourMode 2 and 3, not from a label).
+    Give car_id, or type_id with year. Three packages: full, VIP (adds contract drafting) and economy. The fee depends
+    on the car's value and the time slot.
     """
     if car_id is None:
         if not (type_id and year):
@@ -377,20 +357,17 @@ async def hm_inspection_prices(
         "car_id": car_id,
         "time_slot": time_slot,
         "packages": [{"service": n, "price": p} for n, p in zip(INSPECTION.values(), prices, strict=True)],
-        "note": TOMAN_NOTE,
     }
 
 
 @tool("Hamrah Mechanic showrooms and inspection centers")
 async def hm_branches(
-    province: Annotated[
-        str, Field(description="Province name in Persian (تهران, البرز, اصفهان...) or id (8 = Tehran).")
-    ] = "تهران",
+    province: Annotated[str, Field(description="Persian province name (تهران) or id (8 = Tehran).")] = "تهران",
     inspection_only: Annotated[bool, Field(description="Only centers that do car inspection.")] = False,
 ) -> dict:
     """List Hamrah Mechanic's car showrooms and inspection centers in a province with address, hours and cars in stock.
 
-    Use to say where a used car can be seen or inspected. The `location` of an ad from hm_search_cars names its branch.
+    Use to say where a used car can be seen or inspected.
     """
     provinces = await fetch("/location/province")
     pid = next(
